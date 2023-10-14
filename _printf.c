@@ -53,7 +53,15 @@ int _printf(const char *format, ...)
 	return (printed_chars);
 }
 
-
+/**
+ * print_buffer - Writes the contents of a buffer to the standard output and resets the buffer index.
+ *
+ * This function takes a character buffer and its index as input. If the index indicates that there are characters
+ * in the buffer, it writes the buffer's content to the standard output (usually the console) and then resets the index to zero.
+ *
+ * @param buffer    The character buffer to be printed.
+ * @param buff_ind  A pointer to the index that keeps track of the current position in the buffer.
+ */
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
